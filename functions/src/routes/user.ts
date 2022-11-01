@@ -53,7 +53,7 @@ userRouter.delete("/:userId", async (req, res) => {
   try {
     const userId = req.params.userId;
     await dbService.deleteDocument("users", userId);
-    res.status(204).send('delete completed');
+    res.status(204).send("delete completed");
   } catch (error) {
     res.status(500).send(error);
   }
